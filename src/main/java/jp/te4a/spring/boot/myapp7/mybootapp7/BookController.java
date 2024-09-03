@@ -23,7 +23,7 @@ public class BookController {
     model.addAttribute("msg","this is setting message");
     return "books/list";
   }
-@RequestMapping(value="book/list", method=RequestMethod.POST)
+@RequestMapping(value="books/list", method=RequestMethod.POST)
 public ModelAndView postForm(@RequestParam("id") String id, 
  @RequestParam("title") String title,@RequestParam("writter") String writter, 
  @RequestParam("publisher") String publisher,@RequestParam("price") String price) {
