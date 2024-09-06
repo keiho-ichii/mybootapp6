@@ -9,6 +9,6 @@ public class BookForm {
     private Integer id;
     private String title;
     private String writter;
-    private String publiher;
+    private String publisher;
     private Integer price;
 }

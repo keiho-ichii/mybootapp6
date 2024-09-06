@@ -14,7 +14,7 @@ import jp.te4a.spring.boot.myapp8.BookForm;
 public class BookService{
     @Autowired
     BookRepository bookRepository;
-    public BookBean creat(BookForm bookForm) {
+    public BookBean create(BookForm bookForm) {
         bookForm.setId(bookRepository.getBookid());
         BookBean bookBean = new BookBean();
         BeanUtils.copyProperties(bookForm, bookBean);
@@ -30,6 +30,7 @@ public class BookService{
  public void delete(Integer id) { bookRepository.delete(id);}
  public List<BookForm> findAll() {
     List<BookBean>beanList = bookRepository.findAll();
+    List<BookForm> formList = new ArrayList<BookForm>();
     for(BookBean bookBean:beanList) {
         BookForm bookForm = new BookForm();
         BeanUtils.copyProperties(bookBean, bookForm);
