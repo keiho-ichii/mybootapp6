@@ -56,12 +56,5 @@ String delete(@RequestParam Integer id) {
 @PostMapping(path = "edit",params = "goToTop")
 String goToTop() {   
     return "redirect:/books";
-}
-
-
-
-
-
-  
-
+ }
 }
